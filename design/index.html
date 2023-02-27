@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png"/>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <title>Frontend Mentor |  NFT preview card component</title>
+
+    <style>
+        /* FONTS */
+
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+        /* COLORS */
+
+        :root {
+            --primary--soft--blue: hsl(215, 51%, 70%);
+            --primary--cyan: hsl(178, 100%, 50%);
+            --neutral--verydark--mainbg: hsl(217, 54%, 11%);
+            --neutral--verydark--cardbg: hsl(216, 50%, 16%);
+            --neutral--verydark--line: hsl(215, 32%, 27%);
+            --neutral--white: hsl(0, 0%, 100%);
+        }
+
+        /* STYLE */
+
+        body {
+            background-color: var(--neutral--verydark--mainbg);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-size: 18px;
+            color: var(--primary--soft--blue);
+            font-weight: 300px;
+        }
+
+        section {
+            background-color: var(--neutral--verydark--cardbg);
+            max-width: 450px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .imagem {
+            opacity: 1;
+            display: block;
+            background-image: url(../images/image-equilibrium.jpg);
+            background-size: cover;
+            width: 90.5%;
+            height: 25rem;
+            border-radius: 15px;
+            margin: 30px 0 20px 20px;            
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+       
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 33%;
+            left: 50.5%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        
+        .view:hover {
+            margin: 0;
+            opacity: 1;
+        }
+
+        .cont:hover .middle {
+            opacity: 0.5;
+            background-color: var(--primary--cyan);
+            width: 24rem;
+            height: 25rem;
+            border-radius: 15px;
+            margin: 3px 0px 0px -10px;    
+        }
+
+        .avatar {
+            padding: 0 10px 5px 0;
+            width: 15%;
+            height: auto;
+        }
+
+        .title {
+            margin: 10px 20px 20px 20px;
+        }
+
+        .title p {
+            font-size: 24px;
+        }
+
+        .title a {
+            font-weight: 600;
+            font-size: 30px;
+            color: var(--neutral--white);
+            text-decoration: none;
+        }
+
+        .title a:hover{
+            color: var(--primary--cyan);
+        }
+
+        .eth {
+            color: var(--primary--cyan);
+            font-weight: 600;
+        }
+        
+        .ethimg {
+            padding: 0 10px 5px 0;
+            width: 15%;
+            height: auto;
+        }
+
+        .moeda {
+            margin: 10px 20px 20px 20px;
+        }
+
+        .dias {
+            margin: 10px 20px 20px 20px;
+            text-align: end;
+        }
+
+        .clock {
+            padding: 0 10px 5px 0;
+            width: 20%;
+            height: auto;
+        }
+
+        hr {
+            width: 90%;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .perfil {
+            margin: 10px 20px 20px 20px;
+        }
+
+        .perfil a{
+            color: var(--neutral--white);
+            text-decoration: none;
+        }
+
+        .perfil a:hover{
+            color: var(--primary--cyan);
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row ">
+                <div class="col cont">
+                    <div class="imagem">  
+                    </div>
+                    <div class="middle">
+                        <div class="view"><img src="../images/icon-view.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="title">
+                        <a href="#">Equilibrium #3429</a>
+                        <p>Our Equilibrium collection promotes balance and calm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="moeda">
+                        <p class="eth"><img src="../images/icon-ethereum.svg" alt="ethereum" class="ethimg" />0.041 ETH</p> 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dias">
+                        <p><img src="../images/icon-clock.svg" alt="clock" class="clock">3 days left</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <div class="perfil">
+                        <p><img src="../images/image-avatar.png" alt="avatar" class="avatar">Creation of <a href="#">Jules Wyvern</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>
